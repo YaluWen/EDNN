@@ -101,27 +101,28 @@ output_level: The level of details of the output. **Valid only when screening is
   **Perform screening analysis for one gene
 ```
 python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --train_x_input GeneTrain_1  --gene_name GeneList_1 --group_index_file group_index
-
 ```
 
 * TestSelection=2
   **Perform screening multiple genes 
 ```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1
-
+python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True <br>
+--train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 <br>
+--GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1
 ```
 * TestSelection=3
   **Prediction only
 ```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1 --outputPredFile OutputPred 
-
+python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True <br>
+--train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 <br>
+--AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 <br>
+--geneindexFile GeneList_1 --outputPredFile OutputPred 
 ```
 
 * TestSelection=4
   **Associaiton + Prediction
 ```
 python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1 --outputPredFile OutputPred 
-
 ```
 
 ## Contributing
