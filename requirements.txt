@@ -1,0 +1,7 @@
+sklearn
+numpy==1.19.5
+statistics==1.0.3.5
+keras==2.4.3
+scipy==1.5.4
+tensorflow==2.4.0
+pandas
