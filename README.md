@@ -97,21 +97,21 @@ output_level: The level of details of the output. **Valid only when screening is
 **pre_selected_model_list**: The list of models locations for the pre-selected genes.**default=None**
 
 ## Usage
-* TestSelection=1
-  **Perform screening analysis for one gene
+* TestSelection=1<br>
+ **Perform screening analysis for one gene**
 ```
 python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --train_x_input GeneTrain_1  --gene_name GeneList_1 --group_index_file group_index
 ```
 
-* TestSelection=2
-  **Perform screening multiple genes 
+* TestSelection=2<br>
+  **Perform screening multiple genes** 
 ```
 python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True <br>
 --train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 <br>
 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1
 ```
-* TestSelection=3
-  **Prediction only
+* TestSelection=3<br>
+  **Prediction only**
 ```
 python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True <br>
 --train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 <br>
@@ -119,8 +119,8 @@ python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --
 --geneindexFile GeneList_1 --outputPredFile OutputPred 
 ```
 
-* TestSelection=4
-  **Associaiton + Prediction
+* TestSelection=4<br>
+  **Associaiton + Prediction**
 ```
 python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1 --outputPredFile OutputPred 
 ```
