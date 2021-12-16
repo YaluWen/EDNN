@@ -122,9 +122,7 @@ python /home/j304011/M/meng/DL/DLWrap-main/DLWrap/DLWrapFinal.py --TestSelect 3 
 ```
 
 
-## Contributing
 
-PRs accepted.
 
 ## License
 
