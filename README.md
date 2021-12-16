@@ -115,7 +115,7 @@ python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10  --adjusted Tr
 * TestSelection=3<br>
   **Prediction only**
 ```
-python /home/j304011/M/meng/DL/DLWrap-main/DLWrap/DLWrapFinal.py --TestSelect 3 --seed_value=10 
+python ./DLWrap/DLWrapFinal.py --TestSelect 3 --seed_value=10 
 --alpha 0.001 --adjusted True --train_y_input Data/pheno_train.txt --test_y_input Data/pheno_test.txt 
 --binary_outcome 0 --AssociationDir Result_List1/ --GeneticDataTrain GeneTrain --GeneticDataTest GeneTest  
 --geneindexFile GeneList --outputPredFile myPredAll
