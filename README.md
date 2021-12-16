@@ -100,22 +100,24 @@ output_level: The level of details of the output. **Valid only when screening is
 * TestSelection=1<br>
  **Perform screening analysis for one gene**
 ```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10  --adjusted True --train_y_input Data/pheno_train.txt --binary_outcome 0 --AssociationDir Result_List --train_x_input Data/gene_train_1.txt  --gene_name gene_1
+python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10  --adjusted True 
+--train_y_input Data/pheno_train.txt --binary_outcome 0 --AssociationDir Result_List 
+--train_x_input Data/gene_train_1.txt  --gene_name gene_1
 ```
 
 * TestSelection=2<br>
   **Perform screening multiple genes** 
 ```
- python ./DLWrap/DLWrapFinal.py  --TestSelection 2 --seed_value 10  --adjusted True <br>
- --train_y_input Data/pheno_train.txt --binary_outcome 0 --AssociationDir Result_List1 <br>
+ python ./DLWrap/DLWrapFinal.py  --TestSelection 2 --seed_value 10  --adjusted True 
+ --train_y_input Data/pheno_train.txt --binary_outcome 0 --AssociationDir Result_List1 
  --GeneticDataTrain GeneTrain  --geneindexFile GeneList
 ```
 * TestSelection=3<br>
   **Prediction only**
 ```
-python /home/j304011/M/meng/DL/DLWrap-main/DLWrap/DLWrapFinal.py --TestSelect 3 --seed_value=10 <br>
---alpha 0.001 --adjusted True --train_y_input Data/pheno_train.txt --test_y_input Data/pheno_test.txt <br>
---binary_outcome 0 --AssociationDir Result_List1/ --GeneticDataTrain GeneTrain --GeneticDataTest GeneTest  <br>
+python /home/j304011/M/meng/DL/DLWrap-main/DLWrap/DLWrapFinal.py --TestSelect 3 --seed_value=10 
+--alpha 0.001 --adjusted True --train_y_input Data/pheno_train.txt --test_y_input Data/pheno_test.txt 
+--binary_outcome 0 --AssociationDir Result_List1/ --GeneticDataTrain GeneTrain --GeneticDataTest GeneTest  
 --geneindexFile GeneList --outputPredFile myPredAll
 ```
 
