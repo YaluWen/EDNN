@@ -100,30 +100,25 @@ output_level: The level of details of the output. **Valid only when screening is
 * TestSelection=1<br>
  **Perform screening analysis for one gene**
 ```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --train_x_input GeneTrain_1  --gene_name GeneList_1 --group_index_file group_index
+python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10  --adjusted True --train_y_input Data/pheno_train.txt --binary_outcome 0 --AssociationDir Result_List --train_x_input Data/gene_train_1.txt  --gene_name gene_1
 ```
 
 * TestSelection=2<br>
   **Perform screening multiple genes** 
 ```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True <br>
---train_y_input YtrainFDG.phen --binary_outcome 0 --AssociationDir Result_List1 <br>
---GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1
+ python ./DLWrap/DLWrapFinal.py  --TestSelection 2 --seed_value 10  --adjusted True <br>
+ --train_y_input Data/pheno_train.txt --binary_outcome 0 --AssociationDir Result_List1 <br>
+ --GeneticDataTrain GeneTrain  --geneindexFile GeneList
 ```
 * TestSelection=3<br>
   **Prediction only**
 ```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True <br>
---train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 <br>
---AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 <br>
---geneindexFile GeneList_1 --outputPredFile OutputPred 
+python /home/j304011/M/meng/DL/DLWrap-main/DLWrap/DLWrapFinal.py --TestSelect 3 --seed_value=10 <br>
+--alpha 0.001 --adjusted True --train_y_input Data/pheno_train.txt --test_y_input Data/pheno_test.txt <br>
+--binary_outcome 0 --AssociationDir Result_List1/ --GeneticDataTrain GeneTrain --GeneticDataTest GeneTest  <br>
+--geneindexFile GeneList --outputPredFile myPredAll
 ```
 
-* TestSelection=4<br>
-  **Associaiton + Prediction**
-```
-python ./DLWrap/DLWrapFinal.py  --TestSelection 1 --seed_value 10 --alpha 0.1 --adjusted True --train_y_input YtrainFDG.phen --test_y_input YtestFDG.phen --binary_outcome 0 --AssociationDir Result_List1 --GeneticDataTrain GeneTrain_1 --GeneticDataTest GeneTest_1 --geneindexFile GeneList_1 --outputPredFile OutputPred 
-```
 
 ## Contributing
 
